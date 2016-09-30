@@ -1,0 +1,93 @@
+// Navigation Styling
+
+// Desktop Navigation
+
+.navigation-wrapper
+  height: 90px
+  width: 100%
+  padding: 0 80px
+  background-color: $background-color
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+.title
+  margin: 0
+  font-family: $font-family-secondary
+  color: $primary-red
+  font-size: 1.75rem
+
+.navigation-links-wrapper
+
+.navigation-link-list
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  list-style: none
+  text-align: center
+  margin: 0
+  padding: 0
+  li
+    display: inline-block
+    padding: 10px
+
+.navigation-link
+  color: $primary-text-color
+  text-decoration: none
+  font-size: 1.25rem
+  transition: $transition
+  &:hover
+    border-bottom: 3px solid $primary-text-color
+
+.search-wrapper
+  display: flex
+  flex-direction: row
+
+.search-box
+  display: none
+  height: 1.25rem
+  border: none
+  border-bottom: 2px solid $dark-gray
+  background-color: transparent
+  margin-right: 20px
+  z-index: 10
+
+.search-icon
+  height: 1.25rem
+  width: auto
+  cursor: pointer
+
+.mobile-menu-wrapper
+  display: none
+
+.mobile-menu-icon
+  height: 1.25rem
+  width: auto
+
+// Navigation Media Queries
+
+@media screen and (max-width: $tablet-breakpoint)
+  .navigation-wrapper
+    padding: 0 30px
+
+  .navigation-links-wrapper
+    display: none
+    position: absolute
+    top: 90px
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $background-color
+
+  .navigation-link-list
+    flex-flow: column wrap
+    justify-content: flex-start
+    li
+      padding: 20px
+
+  .search-wrapper
+    display: none
+
+  .mobile-menu-wrapper
+    display: block
